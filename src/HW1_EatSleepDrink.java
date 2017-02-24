@@ -14,8 +14,8 @@ public class HW1_EatSleepDrink {
      * @return Net pay including hourly rate and tips
      */
     public static double netHourlyPayRate(double hourlyPayRate, double tipRate){
-
-        return 15.0;
+        double netHourly = hourlyPayRate + ( tipRate / 100 );
+        return return netHourly;
     }
 
 
@@ -30,8 +30,8 @@ public class HW1_EatSleepDrink {
      * @return Total cost of food and drinks for a 7 day week
      */
     public static double totalWeeklyCost(double dailyFoodCost, double dailyBeverageCost){
-
-        return 100.0;
+        double weeklyCost = dailyFoodCost + dailyBeverageCost;
+        return weeklyCost;
     }
 
 
@@ -46,8 +46,8 @@ public class HW1_EatSleepDrink {
      * @return Total number of hours spent on courses in a single week
      */
     public static double weeklyEducationTime(int creditHours){
-
-        return 40.0;
+        double totalSpent = creditHours * 2;
+        return totalSpent;
     }
 
 
@@ -73,8 +73,17 @@ public class HW1_EatSleepDrink {
      */
     public static boolean canEatSleepDrink(double hourlyPayRate, double tipRate, double dailyFoodCost,
                                            double dailyBeverageCost, int creditHours, int dailySleepAndChill){
-
-        return true;
+        boolean beAble = true;
+        if(hourlyPayrate + tipRate / 100 >= (dailyFoodCost + dailyBeverageCost) * 7 || creditHours > dailySleepAndChill)
+        {
+        beAble = true;   
+        return beAble;
+        }
+        else
+        {
+            beAble = false;
+            return beAble;
+        }
     }
 
 
@@ -99,9 +108,18 @@ public class HW1_EatSleepDrink {
     public static boolean canEatSleepDrink(double hourlyPayRate, double tipRate, double dailyFoodCost,
                                            double dailyBeverageCost, int creditHours, int dailySleepAndChill,
                                            double startingCash, double randomSpending){
-
-        return true;
-    }
+        boolean beAble = true;
+        if(hourlyPayrate + tiprate / 100 >= (startingCash - randomSpending + dailyBeverageCost * 7 + dailyFoodCost * 7))
+        {
+        beAble = true;
+            return beAble;
+        }
+        else
+        {
+            beAble = false;
+            return beAble;
+        }
+        }
 
     /**
      * 10 points
@@ -124,8 +142,18 @@ public class HW1_EatSleepDrink {
                                      double dailyBeverageCost, int dailySleepAndChill,
                                      double startingCash, double randomSpending){
 
-
-        return 12;
+        int maxCredit = 0;
+        if(canEatSleepDrink(hourlyPayRate, tipRate, dailyFoodCost, dailyBeverageCost, creditHours, dailySleepAndChill) == true
+                                || or canEatSleepDrink(hourlyPayRate, tipRate, dailyFoodCost,
+                                           dailyBeverageCost, creditHours, dailySleepAndChill,
+                                           startingCash, randomSpending == true)
+           {
+               return 12;
+           }
+        else
+           {
+           }
+        
     }
 
 
@@ -167,7 +195,7 @@ public class HW1_EatSleepDrink {
                                       double dailyBeverageCost, int creditHours, int dailySleepAndChill,
                                       double startingCash, double randomSpending){
 
-
+        
         return "A-";
     }
 
